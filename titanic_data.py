@@ -33,10 +33,11 @@ print("File Saved Successfully!")
 
 
 plt.figure(figsize=(6,4))
-sns.histplot(data=df, x="Age", hue="Survived", kde=True, element="step")
+sns.histplot(data=df, x="Age", hue="Survived", kde=True,legend=True, element="step")
 plt.title("Titanic: Age Distribution by Survival Status", fontsize=16, fontweight='bold')
 plt.xlabel("Age (Years)")
 plt.ylabel("Count")
+plt.savefig("age_distribution.png", bbox_inches='tight')
 plt.show()
 
 print("\n---Calculating Survived Age---")
@@ -47,9 +48,10 @@ print(calculating_age_survived)
 df["FamilySize"] = df["SibSp"] + df["Parch"] + 1
 
 plt.figure(figsize=(6,4))
-sns.barplot(data= df, x ="FamilySize", y="Survived", palette="viridis")
+sns.barplot(data=df, x="FamilySize", y="Survived", hue="FamilySize", palette="viridis", legend=False)
 plt.title("Survived Rate by Family Size")
 plt.xlabel("Family Size (SibSp + Parch)")
 plt.ylabel("Survival Probability ( 0 to 1)")
 plt.grid(axis="y")
+plt.savefig("family_size.png", bbox_inches='tight')
 plt.show()
