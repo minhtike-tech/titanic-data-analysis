@@ -7,6 +7,12 @@ My first Data Analysis project using Python! I analyzed the Titanic dataset to u
 - **Survival Patterns:** Discovered that young adults (male) were the most impacted group.
 - **Family Size:** Analyzed how family size affected survival chances.
 
+## 📈 Data Visualizations
+### 1. Age Distribution by Survival Status
+![Age Distribution](age_distribution.png)
+### 2. Survived Rate by Family Size
+![Family Size](family_size.png)
+
 ## 🛠️ Tech Stack
 - Python, Pandas, Seaborn, Matplotlib
 
